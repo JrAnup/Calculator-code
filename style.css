@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.wrapper {
+    background: rgb(212, 243, 222);
+    min-height: 100vh;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.calculator {
+    background: rgba(15, 165, 240, 0.164);
+backdrop-filter: blur(22px);
+width: 350px;
+ border-radius: 20px;
+ padding: 2rem;
+ position: relative;
+ z-index: 100;
+}
+/* display area */
+.display {
+    background:rgba(252, 254, 255, 0.24);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.2);  
+   
+
+}
+
+
+/* botton area */
+.botton-area {
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: repeat(4, 1fr); */
+     grid-template-areas: 
+    "ac c div multi"
+    "seven eight nine plus"
+    "four five six minus"
+    "one two three ans"
+    "dot zero zero ans "
+     ; 
+
+    color: white;
+}
+
+.circle{
+    
+    background: linear-gradient(aqua, blue );
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: (50% - 250px);
+    bottom: 15vh;
+
+}
+
+.botton-area > div {
+    background: rgba(14, 242, 189, 0.36);
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-radius: 12px;
+
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.307);
+}
+
+.botton-area > div:active{
+    transform: translateX(4px);
+}
+/* .botton-0:active {
+    transform: translateY(4px);
+} */
+  .botton-0{
+     grid-area: zero;
+}
+.botton-1:active{
+    transform: translateY(4px);
+    grid-area:one;
+}
+.botton-2:active{
+    transform: translateY(4px);
+    grid-area: two; 
+}
+.botton-3:active{
+    grid-area: three; 
+    transform: translateY(4px);
+}
+.botton-4:active{
+    grid-area: four; 
+    transform: translateY(4px);
+}
+.botton-5:active{
+    grid-area: five; 
+    transform: translateY(4px);
+
+}
+.botton-6:active{
+    grid-area:six ; 
+    transform: translateY(4px);
+
+    
+}
+.botton-7:active{
+    grid-area:seven ; 
+    transform: translateY(4px);
+
+}
+.botton-8:active{
+    grid-area: eight;
+    transform: translateY(4px);
+
+}
+.botton-9:active{
+    grid-area: nine;
+    transform: translateY(4px);
+
+}
+
+.botton-ac{
+    grid-area: ac; 
+}
+.botton-c{
+    grid-area:c ; 
+}
+
+.botton-div{
+    grid-area:div ; 
+}
+.botton-multi{
+    grid-area:multi ; 
+}
+.botton-plus{
+    grid-area:plus ; 
+}
+.botton-minus{
+    grid-area:minus; 
+}
+.botton-dot{
+    grid-area: dot; 
+}
+.botton-ans{
+    grid-area:ans ;  
+} 
